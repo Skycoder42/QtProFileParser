@@ -9,5 +9,9 @@ A small library to parse Qt Project Files and provide easy handling of those
  - can understand " in values and \" as an escape-character (but without replacing it)
  - understands all different "operators" (=, +=, -=, ...) and evaluates them correctly
  - Can handle functions and variables without failing, but won't replace those
-  - Simple replacements, like $$TARGET are planned, but not done yet
  - Completly cross-platform (only Qt-Code, should work on any system that's supported by Qt)
+
+#### Planned:
+ - Auto-Replacement of basic variables, e.g. $$TARGET will be replaced by it's contents
+ - Auto-Detection of additional conditions added/removed by the CONFIG variable
+ - recursive include protection (If a file includes itself, it will lead to a crash)
