@@ -18,10 +18,9 @@ A small library to parse Qt Project Files and provide easy handling of those
 
 ## Usage - Example:
     QtProFileParser parser;
-    parser.setFilePath("/some/example/file.pro")//path to the pro file to be parsed
-    			   .setConditions({"win32", "CONFIG(debug, debug|release)"})//additonal conditions to be assumed set
-    			   .setFollowIncludes(true);//follows includes, e.g. include(./sub/file.pri)
-    //performs the actual parsing
-    QProjectFieldMap map = parser.parse();
+    parser.setFilePath("/some/example/file.pro");//path to the pro file to be parsed
+    parser.setConditions({"win32", "CONFIG(debug, debug|release)"});//additonal conditions to be assumed set
+    parser.setFollowIncludes(true);//follows includes, e.g. include(./sub/file.pri)
+    QProjectFieldMap map = parser.parse();//performs the actual parsing
     
     qDebug() << map["QT"];//outputs all contents of the "QT" variable, e.g. core gui
