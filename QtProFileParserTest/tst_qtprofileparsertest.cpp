@@ -13,7 +13,7 @@ void QtProFileParserTest::parsingTest_data()
 	QTest::addColumn<QProjectFieldMap::FieldList>("defaults");
 	QTest::addColumn<QProjectFieldMap::FieldList>("results");
 
-	this->scanXml("D:/linked/Qworkplace/QtProFileParser/QtProFileParserTest/TestVector.xml");
+    this->scanXml(QDir::current().absoluteFilePath("./QtProFileParserTest/TestVector.xml"));
 }
 
 void QtProFileParserTest::parsingTest()
