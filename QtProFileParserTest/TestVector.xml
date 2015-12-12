@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+	<TestVector name="parser_0">
+		<File path="./testProFiles/QtProFileParser.pro"/>
+		<Conditions>
+			<Condition value="unix"/>
+			<Condition value="win32"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="true">			
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+			</Field>
+		</DefaultFields>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="QtProFileParser"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="lib"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="staticlib"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="qtprofileparser.cpp"/>
+				<Entry value="projectscope.cpp"/>
+				<Entry value="qprojectfieldmap.cpp"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="$$PWD/qtprofileparser.h"/>
+				<Entry value="projectscope.h"/>
+				<Entry value="$$PWD/qprojectfieldmap.h"/>
+			</Field>
+			<Field name="target.path">
+				<Entry value="/usr/lib"/>
+			</Field>
+			<Field name="INSTALLS">
+				<Entry value="target"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="parser_1">
+		<File path="./testProFiles/QtProFileParser.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+			<Condition value="baum42"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="true">			
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+			</Field>
+		</DefaultFields>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="QtProFileParser"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0"/>
+				<Entry value="1.1"/>
+				<Entry value="1.2 1.3"/>
+				<Entry value="1.4"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="lib"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="staticlib"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="qtprofileparser.cpp"/>
+				<Entry value="projectscope.cpp"/>
+				<Entry value="qprojectfieldmap.cpp"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="$$PWD/qtprofileparser.h"/>
+				<Entry value="projectscope.h"/>
+				<Entry value="$$PWD/qprojectfieldmap.h"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="BAUM"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="parser_2">
+		<File path="./testProFiles/QtProFileParser.pro"/>
+		<Conditions/>
+		<Includes follow="true"/>
+		<DefaultFields custom="true">			
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+			</Field>
+		</DefaultFields>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="QtProFileParser"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="lib"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="staticlib"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="qtprofileparser.cpp"/>
+				<Entry value="projectscope.cpp"/>
+				<Entry value="qprojectfieldmap.cpp"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="$$PWD/qtprofileparser.h"/>
+				<Entry value="projectscope.h"/>
+				<Entry value="$$PWD/qprojectfieldmap.h"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="BAUM42"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="test_0">
+		<File path="./testProFiles/QtProFileParserTest.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+			<Condition value="CONFIG(debug, debug|release)"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="testlib"/>
+				<Entry value="xml"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="tst_qtprofileparsertest"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="console"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="tst_qtprofileparsertest.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="SRCDIR=\\\&quot;$$PWD/\\\&quot;"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-L$$OUT_PWD/../QtProFileParser/debug/"/>
+				<Entry value="-lQtProFileParser"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="PRE_TARGETDEPS">
+				<Entry value="$$OUT_PWD/../QtProFileParser/debug/QtProFileParser.lib"/>
+			</Field>
+			<Field name="DISTFILES">
+				<Entry value="TestVector.xml"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="tst_qtprofileparsertest.h"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="test_1">
+		<File path="./testProFiles/QtProFileParserTest.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+			<Condition value="win32-g++"/>
+			<Condition value="CONFIG(release, debug|release)"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="testlib"/>
+				<Entry value="xml"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="tst_qtprofileparsertest"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="console"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="tst_qtprofileparsertest.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="SRCDIR=\\\&quot;$$PWD/\\\&quot;"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-L$$OUT_PWD/../QtProFileParser/release/"/>
+				<Entry value="-lQtProFileParser"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="PRE_TARGETDEPS">
+				<Entry value="$$OUT_PWD/../QtProFileParser/release/libQtProFileParser.a"/>
+			</Field>
+			<Field name="DISTFILES">
+				<Entry value="TestVector.xml"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="tst_qtprofileparsertest.h"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="test_2">
+		<File path="./testProFiles/QtProFileParserTest.pro"/>
+		<Conditions>
+			<Condition value="unix"/>
+			<Condition value="CONFIG(debug, debug|release)"/>
+			<Condition value="CONFIG(release, debug|release)"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="testlib"/>
+				<Entry value="xml"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="tst_qtprofileparsertest"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="console"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="tst_qtprofileparsertest.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="SRCDIR=\\\&quot;$$PWD/\\\&quot;"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-L$$OUT_PWD/../QtProFileParser/"/>
+				<Entry value="-lQtProFileParser"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../QtProFileParser"/>
+			</Field>
+			<Field name="PRE_TARGETDEPS">
+				<Entry value="$$OUT_PWD/../QtProFileParser/libQtProFileParser.a"/>
+			</Field>
+			<Field name="DISTFILES">
+				<Entry value="TestVector.xml"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="tst_qtprofileparsertest.h"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_0">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="CONFIG(debug, debug|release)"/>
+		</Conditions>
+		<Includes follow="false"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+				<Entry value="modeltest.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+				<Entry value="modeltest.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_1">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+		</Conditions>
+		<Includes follow="false"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+				<Entry value="winextras"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+				<Entry value="COMPANY=\&quot;\\\&quot;$$QMAKE_TARGET_COMPANY\\\&quot;\&quot;"/>
+				<Entry value="DISPLAY_NAME=\&quot;\\\&quot;$$QMAKE_TARGET_PRODUCT\\\&quot;\&quot;"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+			<Field name="RC_ICONS">
+				<Entry value="./resources/hs_koblenz.ico"/>
+			</Field>
+			<Field name="QMAKE_TARGET_COMPANY">
+				<Entry value="Hochschule Koblenz"/>
+			</Field>
+			<Field name="QMAKE_TARGET_PRODUCT">
+				<Entry value="HS-Companion Admintool"/>
+			</Field>
+			<Field name="QMAKE_TARGET_DESCRIPTION">
+				<Entry value="$$QMAKE_TARGET_PRODUCT"/>
+			</Field>
+			<Field name="RC_LANG">
+				<Entry value="7"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-lUser32"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_2">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+			<Condition value="CONFIG(release, debug|release)"/>
+			<Condition value="CONFIG(baum, baum|42)"/>
+		</Conditions>
+		<Includes follow="false"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+				<Entry value="winextras"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+				<Entry value="COMPANY=\&quot;\\\&quot;$$QMAKE_TARGET_COMPANY\\\&quot;\&quot;"/>
+				<Entry value="DISPLAY_NAME=\&quot;\\\&quot;$$QMAKE_TARGET_PRODUCT\\\&quot;\&quot;"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+			<Field name="RC_ICONS">
+				<Entry value="./resources/hs_koblenz.ico"/>
+			</Field>
+			<Field name="QMAKE_TARGET_COMPANY">
+				<Entry value="Hochschule Koblenz"/>
+			</Field>
+			<Field name="QMAKE_TARGET_PRODUCT">
+				<Entry value="HS-Companion Admintool"/>
+			</Field>
+			<Field name="QMAKE_TARGET_DESCRIPTION">
+				<Entry value="$$QMAKE_TARGET_PRODUCT"/>
+			</Field>
+			<Field name="RC_LANG">
+				<Entry value="7"/>
+				<Entry value="8"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-lUser32"/>
+				<Entry value="-L$$OUT_PWD/../AdminToolCore/release/"/>
+				<Entry value="-lAdminToolCore"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_includes_0">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="CONFIG(release, debug|release)"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+				<Entry value="$$PWD/directoryitem.cpp"/>
+				<Entry value="$$PWD/pluginloadermodel.cpp"/>
+				<Entry value="$$PWD/pluginmanagerdialog.cpp"/>
+				<Entry value="$$PWD/pluginmetaitem.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+				<Entry value="$$PWD/directoryitem.h"/>
+				<Entry value="$$PWD/loadermodelitem.h"/>
+				<Entry value="$$PWD/pluginloadermodel.h"/>
+				<Entry value="$$PWD/pluginmanagerdialog.h"/>
+				<Entry value="$$PWD/pluginmetaitem.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+				<Entry value="$$PWD/pluginmanagerdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+			<Field name="DISTFILES">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+			<Field name="TRANSLATIONS">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_includes_1">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="CONFIG(release, debug|release)"/>
+			<Condition value="lupdate_only"/>
+			<Condition value="unix"/>
+			<Condition value="isEmpty(target.path)"/>
+			<Condition value="unix"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+				<Entry value="$$PWD/directoryitem.cpp"/>
+				<Entry value="$$PWD/pluginloadermodel.cpp"/>
+				<Entry value="$$PWD/pluginmanagerdialog.cpp"/>
+				<Entry value="$$PWD/pluginmetaitem.cpp"/>
+				<Entry value="$$PWD/../*.qml"/>
+				<Entry value="$$PWD/../*.js"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+				<Entry value="$$PWD/directoryitem.h"/>
+				<Entry value="$$PWD/loadermodelitem.h"/>
+				<Entry value="$$PWD/pluginloadermodel.h"/>
+				<Entry value="$$PWD/pluginmanagerdialog.h"/>
+				<Entry value="$$PWD/pluginmetaitem.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+				<Entry value="$$PWD/pluginmanagerdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+			<Field name="DISTFILES">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+			<Field name="TRANSLATIONS">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+			<Field name="INSTALLS">
+				<Entry value="target"/>
+			</Field>
+			<Field name="target.path">
+				<Entry value="/opt/$${TARGET}/bin"/>
+			</Field>
+		</Result>
+	</TestVector>
+	<TestVector name="admintool_includes_2">
+		<File path="./testProFiles/AdminToolMain.pro"/>
+		<Conditions>
+			<Condition value="win32"/>
+			<Condition value="CONFIG(debug, debug|release)"/>
+		</Conditions>
+		<Includes follow="true"/>
+		<DefaultFields custom="false"/>
+		<Result>
+			<Field name="QT">
+				<Entry value="core"/>
+				<Entry value="gui"/>
+				<Entry value="qml"/>
+				<Entry value="quick"/>
+				<Entry value="widgets"/>
+				<Entry value="network"/>
+				<Entry value="xml"/>
+				<Entry value="quickwidgets"/>
+				<Entry value="winextras"/>
+			</Field>
+			<Field name="TARGET">
+				<Entry value="HSCompanionAdminTool"/>
+			</Field>
+			<Field name="CONFIG">
+				<Entry value="app_bundle"/>
+				<Entry value="debug_and_release_target"/>
+				<Entry value="exceptions"/>
+				<Entry value="qt"/>
+				<Entry value="thread"/>
+				<Entry value="flat"/>
+				<Entry value="embed_manifest_exe"/>
+				<Entry value="embed_manifest_dll"/>
+			</Field>
+			<Field name="TEMPLATE">
+				<Entry value="app"/>
+			</Field>
+			<Field name="SOURCES">
+				<Entry value="main.cpp"/>
+				<Entry value="mainwindow.cpp"/>
+				<Entry value="settingsdialog.cpp"/>
+				<Entry value="exchangemanager.cpp"/>
+				<Entry value="startupmanager.cpp"/>
+				<Entry value="modeltest.cpp"/>
+				<Entry value="$$PWD/directoryitem.cpp"/>
+				<Entry value="$$PWD/pluginloadermodel.cpp"/>
+				<Entry value="$$PWD/pluginmanagerdialog.cpp"/>
+				<Entry value="$$PWD/pluginmetaitem.cpp"/>
+			</Field>
+			<Field name="DEFINES">
+				<Entry value="TARGET=\\\&quot;$$TARGET\\\&quot;"/>
+				<Entry value="VERSION=\\\&quot;$$VERSION\\\&quot;"/>
+				<Entry value="QT_USE_QSTRINGBUILDER"/>
+				<Entry value="COMPANY=\&quot;\\\&quot;$$QMAKE_TARGET_COMPANY\\\&quot;\&quot;"/>
+				<Entry value="DISPLAY_NAME=\&quot;\\\&quot;$$QMAKE_TARGET_PRODUCT\\\&quot;\&quot;"/>
+			</Field>
+			<Field name="INCLUDEPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="DEPENDPATH">
+				<Entry value="$$PWD/../AdminToolCore"/>
+			</Field>
+			<Field name="HEADERS">
+				<Entry value="mainwindow.h"/>
+				<Entry value="settingsdialog.h"/>
+				<Entry value="exchangemanager.h"/>
+				<Entry value="startupmanager.h"/>
+				<Entry value="modeltest.h"/>
+				<Entry value="$$PWD/directoryitem.h"/>
+				<Entry value="$$PWD/loadermodelitem.h"/>
+				<Entry value="$$PWD/pluginloadermodel.h"/>
+				<Entry value="$$PWD/pluginmanagerdialog.h"/>
+				<Entry value="$$PWD/pluginmetaitem.h"/>
+			</Field>
+			<Field name="FORMS">
+				<Entry value="mainwindow.ui"/>
+				<Entry value="settingsdialog.ui"/>
+				<Entry value="$$PWD/pluginmanagerdialog.ui"/>
+			</Field>
+			<Field name="RESOURCES">
+				<Entry value="adminToolMain_res.qrc"/>
+			</Field>
+			<Field name="VERSION">
+				<Entry value="1.0.0"/>
+			</Field>
+			<Field name="QML_IMPORT_PATH" />
+			<Field name="DISTFILES">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+			<Field name="TRANSLATIONS">
+				<Entry value="$$PWD/AdminToolMain_de.ts"/>
+				<Entry value="$$PWD/AdminToolMain_en.ts"/>
+			</Field>
+			<Field name="RC_ICONS">
+				<Entry value="./resources/hs_koblenz.ico"/>
+			</Field>
+			<Field name="QMAKE_TARGET_COMPANY">
+				<Entry value="Hochschule Koblenz"/>
+			</Field>
+			<Field name="QMAKE_TARGET_PRODUCT">
+				<Entry value="HS-Companion Admintool"/>
+			</Field>
+			<Field name="QMAKE_TARGET_DESCRIPTION">
+				<Entry value="$$QMAKE_TARGET_PRODUCT"/>
+			</Field>
+			<Field name="RC_LANG">
+				<Entry value="7"/>
+			</Field>
+			<Field name="LIBS">
+				<Entry value="-lUser32"/>
+				<Entry value="-L$$OUT_PWD/../AdminToolCore/debug/"/>
+				<Entry value="-lAdminToolCored"/>
+			</Field>
+		</Result>
+	</TestVector>
+</TestData>
