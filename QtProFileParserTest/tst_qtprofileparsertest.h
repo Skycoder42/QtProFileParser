@@ -21,7 +21,7 @@ private:
 	void scanXml(const QString &path);
 	QProjectFieldMap::FieldList extractFieldMap(QDomElement &element);
 
-	QString compare(QProjectFieldMap::FieldList &left, QProjectFieldMap::FieldList &right);
+	QString compare(const QProjectFieldMap::FieldList &left, const QProjectFieldMap::FieldList &right);
 };
 
 #endif // TST_QTPROFILEPARSERTEST_H

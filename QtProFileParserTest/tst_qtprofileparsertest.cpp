@@ -109,7 +109,7 @@ QProjectFieldMap::FieldList QtProFileParserTest::extractFieldMap(QDomElement &el
 	return fieldList;
 }
 
-QString QtProFileParserTest::compare(QProjectFieldMap::FieldList &left, QProjectFieldMap::FieldList &right)
+QString QtProFileParserTest::compare(const QProjectFieldMap::FieldList &left, const QProjectFieldMap::FieldList &right)
 {
 	QStringList globalKeys;
 	QMap<QString, QProjectFieldMap::FieldEntry> leftMap;

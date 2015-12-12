@@ -5,8 +5,9 @@
 #-------------------------------------------------
 
 QT       -= gui
+CONFIG += C++11
 
-TARGET = QtProFileParser
+TARGET = $$qtLibraryTarget(QtProFileParser)
 TEMPLATE = lib
 CONFIG += staticlib
 
@@ -14,18 +15,6 @@ SOURCES += qtprofileparser.cpp \
     projectscope.cpp \
     qprojectfieldmap.cpp
 
-HEADERS += \
+HEADERS += qtprofileparser.h \
+	qprojectfieldmap.h \
 	projectscope.h
-
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-} else:win32 {
-	DEFINES += BAUM
-} else {
-	DEFINES += BAUM42
-}
-
-baum42: VERSION = 1.0 1.1 "1.2 1.3" 1.4
-
-include(public.pri)
