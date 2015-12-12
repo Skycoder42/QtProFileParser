@@ -15,3 +15,13 @@ A small library to parse Qt Project Files and provide easy handling of those
  - Auto-Replacement of basic variables, e.g. $$TARGET will be replaced by it's contents
  - Auto-Detection of additional conditions added/removed by the CONFIG variable
  - recursive include protection (If a file includes itself, it will lead to a crash)
+
+## Usage - Example:
+    QtProFileParser parser;
+    parser.setFilePath("/some/example/file.pro")//path to the pro file to be parsed
+    			   .setConditions({"win32", "CONFIG(debug, debug|release)"})//additonal conditions to be assumed set
+    			   .setFollowIncludes(true);//follows includes, e.g. include(./sub/file.pri)
+    //performs the actual parsing
+    QProjectFieldMap map = parser.parse();
+    
+    qDebug() << map["QT"];//outputs all contents of the "QT" variable, e.g. core gui
